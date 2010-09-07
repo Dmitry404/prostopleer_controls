@@ -1,5 +1,12 @@
 {
   "name": "Prostopleer Controls",
   "version": "0.1",
-  "description": "Adds control buttons for prostopleer.com"
+  "description": "Adds control buttons for prostopleer.com",
+  "browser_action": {
+      "default_icon": "img/playback_play.png",
+      "popup": "bakground.html"
+  },
+  "permissions": [
+      "tabs"
+  ]
 }
