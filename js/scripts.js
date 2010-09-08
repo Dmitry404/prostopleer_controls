@@ -20,7 +20,7 @@ function init()
     chrome.tabs.getAllInWindow(undefined, function(tabs) {
         tabs.forEach(function(tab) {
             if(isPlayerUrl(tab.url)) {
-                player_tab = tab;                
+                player_tab = tab; chrome.pageAction.show(tab.id)
             }
         });
         if(player_tab == null) {
@@ -34,5 +34,44 @@ function init()
         }
     });
 
+    initButtons();
     // todo
+}
+
+function initButtons()
+{
+    document.getElementById('home').addEventListener(
+        'click',
+        function() {
+            chrome.tabs.update(player_tab.id, {selected: true});
+            window.close();
+        },
+        false);
+
+    document.getElementById('prev').addEventListener(
+        'click',
+        function() {
+            // todo
+            //chrome.tabs.sendRequest(player_tab.id, {action: 'previous_song'});
+            //window.close();
+        },
+        false);
+
+    document.getElementById('next').addEventListener(
+        'click',
+        function() {
+            // todo
+            //chrome.tabs.sendRequest(player_tab.id, {action: 'next_song'});
+            //window.close();
+        },
+        false);
+
+    document.getElementById('play_pause').addEventListener(
+        'click',
+        function() {
+            // todo
+            //chrome.tabs.sendRequest(player_tab.id, {action: ''});
+            //window.close();
+        },
+        false);
 }
