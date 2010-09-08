@@ -24,13 +24,14 @@ body {
 .controls a.pause {
     padding-right: 2px;
 }
-.controls a.stop {
+.controls #home {
+    padding-right: 2px;
+    margin-bottom: 2px;
+}
+.controls #next {
     padding-right: 2px;
 }
-.controls a.next {
-    padding-right: 2px;
-}
-.controls a.prev {
+.controls #prev {
     padding-right: 2px;
 }
 
