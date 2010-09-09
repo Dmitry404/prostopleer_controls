@@ -1,42 +1,33 @@
-body {
-    margin: 0 auto;
-    width: 104px;
-    height: 25px;
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    overflow: hidden;
 }
-
-.controls {
-    padding: 1px;
+body {
+    width: 106px;
+    margin: 0 auto;
 }
 .controls a {
-    border-radius: 2px;
+    display: block;
+    float: left;
+    height: 23px;
+    width: 23px;
     background: transparent url(../img/bg-btn.png) repeat-x 0 0;
+    border: 1px solid #000000;
+    border-radius: 2px;
     margin-right: 2px;
     text-decoration: none;
-    border: 1px solid #000000;
-    padding-bottom: 1px;
 }
 .controls a:hover {
     background: transparent url(../img/bg-btn-hover.png) repeat-x 0 0;
 }
-.controls a.play {
-    padding-right: 1px;
+.controls a.last {
+    margin-right: 0;
 }
-.controls a.pause {
-    padding-right: 2px;
-}
-.controls #home {
-    padding-right: 2px;
-    margin-bottom: 2px;
-}
-.controls #next {
-    padding-right: 2px;
-}
-.controls #prev {
-    padding-right: 2px;
-}
-
 .controls img {
-    position: relative;
-    top: 3px;
-    left: 3px;
+    margin: 4px 0 0 3px;
+}
+.controls a.play img {
+    margin: 4px 0 0 4px;
 }
