@@ -66,7 +66,6 @@ function initButtons()
     document.getElementById('play_pause').addEventListener(
         'click',
         function() {
-            // todo
             chrome.tabs.sendRequest(player_tab.id, {action: 'firePlayPause'});
             window.close();
         },

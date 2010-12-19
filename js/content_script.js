@@ -15,27 +15,30 @@ function onRequest(request, sender, callback)
 
 function firePlayPause()
 {
-    var elem = document.getElementById('play');
-    simulateClick(elem);
+    simulateClick('play');
 }
 
 function firePrevious()
 {
-    var elem = document.getElementById('rw');
-    simulateClick(elem);
+    simulateClick('rw');
 }
 
 function fireNext()
 {
-    var elem = document.getElementById('fw');
-    simulateClick(elem);
+    simulateClick('fw');
 }
 
-function simulateClick(target) {
+function simulateClick(targetId)
+{
   var event = document.createEvent("MouseEvents");
   event.initMouseEvent("click", true, true, window,
     0, 0, 0, 0, 0, false, false, false, false, 0, null
   );
 
-    return target.dispatchEvent(event);
+  var target = document.getElementById(targetId);
+  if(target != null) {
+      return target.dispatchEvent(event);
+  } else {
+      return false;
+  }
 }
