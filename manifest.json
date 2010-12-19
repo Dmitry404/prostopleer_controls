@@ -1,6 +1,6 @@
 {
   "name": "Prostopleer Controls",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Adds control buttons for prostopleer.com",
 
   "browser_action": {
