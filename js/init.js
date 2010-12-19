@@ -35,7 +35,6 @@ function init()
     });
 
     initButtons();
-    // todo
 }
 
 function initButtons()
@@ -51,18 +50,16 @@ function initButtons()
     document.getElementById('prev').addEventListener(
         'click',
         function() {
-            // todo
-            //chrome.tabs.sendRequest(player_tab.id, {action: 'previous_song'});
-            //window.close();
+            chrome.tabs.sendRequest(player_tab.id, {action: 'firePrevious'});
+            window.close();
         },
         false);
 
     document.getElementById('next').addEventListener(
         'click',
         function() {
-            // todo
-            //chrome.tabs.sendRequest(player_tab.id, {action: 'next_song'});
-            //window.close();
+            chrome.tabs.sendRequest(player_tab.id, {action: 'fireNext'});
+            window.close();
         },
         false);
 
@@ -70,8 +67,8 @@ function initButtons()
         'click',
         function() {
             // todo
-            //chrome.tabs.sendRequest(player_tab.id, {action: ''});
-            //window.close();
+            chrome.tabs.sendRequest(player_tab.id, {action: 'firePlayPause'});
+            window.close();
         },
         false);
 }
